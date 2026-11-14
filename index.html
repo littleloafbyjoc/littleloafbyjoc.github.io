@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>little loaf by joc | san diego sourdough</title>
+  <meta name="description" content="Small-batch sourdough by Jocelyn. Homemade, slowly fermented, and freshly baked to order in San Diego. DM to order.">
+  <meta property="og:title" content="little loaf by joc | san diego sourdough">
+  <meta property="og:description" content="Small-batch sourdough by Jocelyn. Freshly baked to order in San Diego.">
+  <meta property="og:image" content="images/hero.jpg">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍞</text></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+  <!-- The ribbon bow, drawn once and reused everywhere with <use href="#bow"> -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="bow" viewBox="0 0 120 84">
+      <path class="bow-tail" d="M55 36 C48 52 38 64 26 76 L39 74 L43 81 C51 67 58 52 63 38 Z"/>
+      <path class="bow-tail" d="M65 36 C72 52 82 64 94 76 L81 74 L77 81 C69 67 62 52 57 38 Z"/>
+      <path class="bow-loop" d="M60 31 C42 4 10 -2 7 22 C4 47 40 45 60 31 Z"/>
+      <path class="bow-loop" d="M60 31 C78 4 110 -2 113 22 C116 47 80 45 60 31 Z"/>
+      <path class="bow-fold" d="M52 30 C40 22 26 18 15 22"/>
+      <path class="bow-fold" d="M68 30 C80 22 94 18 105 22"/>
+      <rect class="bow-knot" x="51" y="21" width="18" height="20" rx="7"/>
+    </symbol>
+  </svg>
+
+  <!-- ============ TOP BAR ============ -->
+  <header class="nav" id="top">
+    <div class="nav-inner">
+      <a class="logo" href="#welcome" aria-label="little loaf by joc, back to top">
+        <svg class="bow bow-xs" aria-hidden="true"><use href="#bow"/></svg>
+        <span>little loaf <em>by joc</em></span>
+      </a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-links" id="nav-links" aria-label="Sections">
+        <a href="#welcome">welcome</a>
+        <a href="#menu">menu</a>
+        <a href="#order">order</a>
+        <a href="#about">about</a>
+        <a href="#contact">contact</a>
+        <a class="btn btn-small" href="#order">order now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ 1. WELCOME ============ -->
+    <section class="hero" id="welcome">
+      <div class="wrap hero-grid">
+        <div class="hero-text">
+          <p class="script">in my breadwinner era</p>
+          <h1>small-batch sourdough, baked with love in san diego</h1>
+          <p class="lead">
+            hi, i'm jocelyn! every little loaf is homemade, slowly fermented,
+            and freshly baked to order. feeding my starter &amp; your cravings,
+            one loaf at a time. ♡
+          </p>
+          <div class="hero-actions">
+            <a class="btn" href="#order">order now</a>
+            <a class="btn btn-ghost" href="#menu">see the menu</a>
+          </div>
+          <p class="pin">📍 san diego &nbsp;|&nbsp; local pickup</p>
+        </div>
+
+        <div class="hero-photo">
+          <svg class="bow bow-lg hero-bow" aria-hidden="true"><use href="#bow"/></svg>
+          <div class="photo arch">
+            <img src="images/hero.jpg" alt="Holding up a freshly baked sourdough loaf in a paper bag" onerror="this.parentElement.classList.add('is-empty');this.remove()">
+            <span class="photo-label">hero.jpg<small>your best loaf photo</small></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- scrolling ribbon -->
+    <div class="ribbon-strip" aria-hidden="true">
+      <div class="ribbon-track">
+        <span>feeding my starter &amp; your cravings</span><span>♡</span>
+        <span>small-batch sourdough</span><span>♡</span>
+        <span>baked fresh to order</span><span>♡</span>
+        <span>san diego local pickup</span><span>♡</span>
+        <span>i loaf you!</span><span>♡</span>
+        <span>feeding my starter &amp; your cravings</span><span>♡</span>
+        <span>small-batch sourdough</span><span>♡</span>
+        <span>baked fresh to order</span><span>♡</span>
+        <span>san diego local pickup</span><span>♡</span>
+        <span>i loaf you!</span><span>♡</span>
+      </div>
+    </div>
+
+    <!-- ============ 2. MENU ============ -->
+    <section class="section section-cream" id="menu">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <svg class="bow bow-md" aria-hidden="true"><use href="#bow"/></svg>
+          <h2>the menu</h2>
+          <p>every loaf is made fresh to order, so please allow 2–3 days' notice.</p>
+        </header>
+
+        <div class="menu-grid">
+          <article class="card reveal">
+            <div class="photo">
+              <img src="images/classic.jpg" alt="Classic sourdough loaf" onerror="this.parentElement.classList.add('is-empty');this.remove()">
+              <span class="photo-label">classic.jpg</span>
+            </div>
+            <div class="card-body">
+              <h3>classic sourdough</h3>
+              <p>the one that started it all. crackly crust, soft and tangy inside.</p>
+              <span class="price">$10</span>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="photo">
+              <img src="images/cinnamon-raisin.jpg" alt="Cinnamon raisin sourdough loaf" onerror="this.parentElement.classList.add('is-empty');this.remove()">
+              <span class="photo-label">cinnamon-raisin.jpg</span>
+            </div>
+            <div class="card-body">
+              <h3>cinnamon raisin</h3>
+              <p>warm cinnamon and sweet raisins in every slice. toast it with butter!</p>
+              <span class="price">$13</span>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="photo">
+              <img src="images/jalapeno-cheddar.jpg" alt="Jalapeño cheddar sourdough loaf" onerror="this.parentElement.classList.add('is-empty');this.remove()">
+              <span class="photo-label">jalapeno-cheddar.jpg</span>
+            </div>
+            <div class="card-body">
+              <h3>jalapeño cheddar</h3>
+              <p>a little spicy, a lot cheesy. melty cheddar with a jalapeño kick.</p>
+              <span class="price">$15</span>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="photo">
+              <img src="images/custom.jpg" alt="Custom specialty sourdough loaf" onerror="this.parentElement.classList.add('is-empty');this.remove()">
+              <span class="photo-label">custom.jpg</span>
+            </div>
+            <div class="card-body">
+              <h3>custom specialty loaves</h3>
+              <p>dreaming of a flavor? custom flavors and add-ins are always welcome.</p>
+              <span class="price">$12–16+</span>
+            </div>
+          </article>
+        </div>
+
+        <p class="menu-note reveal">have an idea for a loaf? just reach out to chat options and pricing ♡</p>
+      </div>
+    </section>
+
+    <!-- ============ 3. ORDER NOW ============ -->
+    <section class="section section-pink" id="order">
+      <div class="scallop scallop-cream" aria-hidden="true"></div>
+      <div class="wrap">
+        <header class="section-head reveal">
+          <svg class="bow bow-md" aria-hidden="true"><use href="#bow"/></svg>
+          <h2>how to order</h2>
+          <p>ordering is easy! send me a dm on instagram or fill out the form below, and i'll take care of the rest.</p>
+        </header>
+
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step-num">1</span>
+            <h3>pick your loaf</h3>
+            <p>choose from the menu, or dream up a custom flavor.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-num">2</span>
+            <h3>send your order</h3>
+            <p>dm me or use the form with your loaf, quantity, and pickup date (2–3 days' notice, please!).</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-num">3</span>
+            <h3>pick up &amp; enjoy</h3>
+            <p>grab your fresh loaf at local pickup in san diego.</p>
+          </li>
+        </ol>
+
+        <div class="order-cta reveal">
+          <a class="btn btn-big" href="https://ig.me/m/littleloafbyjoc" target="_blank" rel="noopener">
+            💌 order now on instagram
+          </a>
+          <p class="fine">opens a dm with <strong>@littleloafbyjoc</strong></p>
+        </div>
+
+        <!-- Order form: sends an email through Web3Forms (web3forms.com).
+             Replace YOUR_ACCESS_KEY below with the key they email you. -->
+        <div class="order-form-wrap reveal" id="order-form">
+          <p class="or-divider"><span>or order right here</span></p>
+
+          <form class="order-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY">
+            <input type="hidden" name="subject" value="New little loaf order! 🍞">
+            <input type="hidden" name="from_name" value="little loaf by joc website">
+            <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+            <div class="field">
+              <label for="f-name">your name</label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required>
+            </div>
+
+            <div class="field">
+              <label for="f-contact">how can i reach you?</label>
+              <input id="f-contact" name="contact" type="text" placeholder="phone, email, or instagram" required>
+            </div>
+
+            <div class="field field-full">
+              <label for="f-loaf">which loaf?</label>
+              <select id="f-loaf" name="loaf" required>
+                <option value="" selected disabled>pick a loaf</option>
+                <option>classic sourdough ($10)</option>
+                <option>cinnamon raisin ($13)</option>
+                <option>jalapeño cheddar ($15)</option>
+                <option>custom specialty loaf ($12–16+)</option>
+              </select>
+            </div>
+
+            <div class="field field-small">
+              <label for="f-qty">how many?</label>
+              <input id="f-qty" name="quantity" type="number" min="1" max="20" value="1" inputmode="numeric" required>
+            </div>
+
+            <div class="field field-small">
+              <label for="f-date">pickup date</label>
+              <input id="f-date" name="pickup_date" type="date" required>
+            </div>
+
+            <div class="field field-full">
+              <label for="f-notes">anything else? <small>(custom flavors, more loaves, questions)</small></label>
+              <textarea id="f-notes" name="notes" rows="3"></textarea>
+            </div>
+
+            <div class="field-full form-actions">
+              <button class="btn btn-big" type="submit">send my order ♡</button>
+              <p class="fine">i'll message you back to confirm your order and pickup details.</p>
+              <p class="form-status" role="status" aria-live="polite"></p>
+            </div>
+          </form>
+
+          <div class="form-success" hidden>
+            <svg class="bow bow-md" aria-hidden="true"><use href="#bow"/></svg>
+            <h3>order sent!</h3>
+            <p>thank you so much! i'll reach out soon to confirm everything. i loaf you! ♡</p>
+          </div>
+        </div>
+      </div>
+      <div class="scallop scallop-white scallop-bottom" aria-hidden="true"></div>
+    </section>
+
+    <!-- ============ 4. ABOUT ============ -->
+    <section class="section section-white" id="about">
+      <div class="wrap about-grid">
+        <div class="about-photo reveal">
+          <div class="photo tilt">
+            <img src="images/jocelyn.jpg" alt="Jocelyn, the baker behind little loaf by joc" onerror="this.parentElement.classList.add('is-empty');this.remove()">
+            <span class="photo-label">jocelyn.jpg<small>a photo of the baker</small></span>
+          </div>
+          <svg class="bow bow-md about-bow" aria-hidden="true"><use href="#bow"/></svg>
+        </div>
+
+        <div class="about-text reveal">
+          <p class="script">nice to meet you!</p>
+          <h2>about little loaf by joc</h2>
+          <p>
+            hi everyone! i'm jocelyn, and i'm so excited to share a little piece
+            of something i love with you. what started as a simple love for baking
+            has grown into something i can share with others, one loaf at a time.
+          </p>
+          <p>
+            each loaf is homemade, slowly fermented, and freshly baked to order
+            with lots of love and care. whether you're supporting my little baking
+            journey or simply stopping by for some good bread, i'm so happy you're here!
+          </p>
+          <p>
+            thank you so much for supporting my little home bakery. every order
+            means the world to me.
+          </p>
+          <p class="signoff">i loaf you! ♡ <span>jocelyn</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GALLERY ============ -->
+    <section class="section section-blush" id="gallery">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <svg class="bow bow-md" aria-hidden="true"><use href="#bow"/></svg>
+          <h2>fresh from the oven</h2>
+          <p>a peek at recent bakes. follow along on instagram for more!</p>
+        </header>
+
+        <div class="gallery">
+          <div class="photo reveal"><img src="images/gallery-1.jpg" alt="Recent bake" onerror="this.parentElement.classList.add('is-empty');this.remove()"><span class="photo-label">gallery-1.jpg</span></div>
+          <div class="photo reveal"><img src="images/gallery-2.jpg" alt="Recent bake" onerror="this.parentElement.classList.add('is-empty');this.remove()"><span class="photo-label">gallery-2.jpg</span></div>
+          <div class="photo reveal"><img src="images/gallery-3.jpg" alt="Recent bake" onerror="this.parentElement.classList.add('is-empty');this.remove()"><span class="photo-label">gallery-3.jpg</span></div>
+          <div class="photo reveal"><img src="images/gallery-4.jpg" alt="Recent bake" onerror="this.parentElement.classList.add('is-empty');this.remove()"><span class="photo-label">gallery-4.jpg</span></div>
+          <div class="photo reveal"><img src="images/gallery-5.jpg" alt="Recent bake" onerror="this.parentElement.classList.add('is-empty');this.remove()"><span class="photo-label">gallery-5.jpg</span></div>
+          <div class="photo reveal"><img src="images/gallery-6.jpg" alt="Recent bake" onerror="this.parentElement.classList.add('is-empty');this.remove()"><span class="photo-label">gallery-6.jpg</span></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ CONTACT ============ -->
+  <footer class="footer" id="contact">
+    <div class="scallop scallop-blush" aria-hidden="true"></div>
+    <div class="wrap footer-inner">
+      <svg class="bow bow-md" aria-hidden="true"><use href="#bow"/></svg>
+      <h2>say hi!</h2>
+      <p>questions, custom orders, or just want to talk bread? find me on instagram.</p>
+      <a class="btn btn-light" href="https://www.instagram.com/littleloafbyjoc/" target="_blank" rel="noopener">
+        <svg class="ig" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1" class="ig-dot"/></svg>
+        @littleloafbyjoc
+      </a>
+      <p class="footer-meta">📍 san diego &nbsp;|&nbsp; local pickup &nbsp;|&nbsp; 💌 dm to order</p>
+      <p class="copyright">© <span id="year">2026</span> little loaf by joc · made with love &amp; a lot of flour</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
