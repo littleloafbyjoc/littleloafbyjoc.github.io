@@ -57,7 +57,7 @@ document.getElementById('year').textContent = new Date().getFullYear();
 //   1. an email to the bakery inbox (Web3Forms; the key is in index.html)
 //   2. a new row in the orders Google Sheet (paste the Apps Script web app URL below)
 // google-sheets-setup.md explains how to get that URL.
-const SHEETS_URL = '';
+const SHEETS_URL = 'https://script.google.com/macros/s/AKfycby4TmPc0KF2qf6oUFPxJ1BAiFOee7l5Cy2douyClLZj1LebjC2CRITswfHAsEtYcDU/exec';
 
 const form = document.querySelector('.order-form');
 if (form) {
@@ -100,7 +100,7 @@ if (form) {
   function refreshRows() {
     const rows = [...loafList.children];
     rows.forEach((row, i) => {
-      row.querySelector('label').textContent = rows.length > 1 ? `loaf ${i + 1}` : 'which loaf?';
+      row.querySelector('label').textContent = `loaf ${i + 1}`;
       row.querySelector('.remove-loaf').hidden = rows.length === 1;
     });
     updateTotal();
