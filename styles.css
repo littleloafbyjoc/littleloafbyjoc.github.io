@@ -576,7 +576,7 @@ p { margin: 0 0 1em; }
 .field input:focus, .field select:focus, .field textarea:focus {
   outline: none;
   border-color: var(--rose);
-  background: var(--white);
+  background-color: var(--white);
   box-shadow: 0 0 0 3px rgba(194, 87, 122, .2);
 }
 .field .is-invalid { border-color: #c0392b; }
@@ -591,7 +591,71 @@ p { margin: 0 0 1em; }
 
 @media (max-width: 600px) {
   .order-form { grid-template-columns: 1fr 1fr; }
-  .order-form .field:not(.field-small) { grid-column: 1 / -1; }
+  .order-form > .field:not(.field-small) { grid-column: 1 / -1; }
+}
+
+/* ---------- multiple loaves ---------- */
+.loaves { border: 0; margin: 0; padding: 0; min-width: 0; }
+.loaves legend {
+  padding: 0;
+  margin-bottom: 10px;
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 1.15rem;
+}
+.loaf-list { display: flex; flex-direction: column; gap: 12px; }
+.loaf-row {
+  display: grid;
+  grid-template-columns: 1fr 120px 44px;
+  gap: 12px;
+  align-items: end;
+  padding: 14px;
+  border-radius: 16px;
+  background: var(--blush);
+  border: 2px dashed var(--pink);
+}
+.loaf-row:has(.remove-loaf[hidden]) { grid-template-columns: 1fr 120px; }
+.loaf-row .field input, .loaf-row .field select { background-color: var(--white); }
+.remove-loaf {
+  width: 44px;
+  height: 48px;
+  border: 2px solid var(--pink);
+  border-radius: 14px;
+  background: var(--white);
+  color: var(--rose-dark);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.remove-loaf:hover { border-color: var(--rose); background: var(--pink); }
+.add-loaf {
+  margin-top: 12px;
+  width: 100%;
+  min-height: 48px;
+  border: 2px dashed var(--pink-deep);
+  border-radius: 14px;
+  background: transparent;
+  color: var(--rose-dark);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background .15s, border-color .15s;
+}
+.add-loaf:hover { background: var(--blush); border-color: var(--rose); }
+.loaf-total {
+  margin: 12px 0 0;
+  text-align: right;
+  font-family: var(--font-head);
+  font-weight: 600;
+  color: var(--rose-dark);
+  min-height: 1.5em;
+}
+
+@media (max-width: 600px) {
+  .loaf-row { grid-template-columns: 1fr 44px; }
+  .loaf-row .field:first-child { grid-column: 1 / -1; }
+  .loaf-row:has(.remove-loaf[hidden]) { grid-template-columns: 1fr; }
+  .loaf-total { text-align: center; }
 }
 
 [hidden] { display: none !important; }

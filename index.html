@@ -219,29 +219,41 @@
               <input id="f-contact" name="contact" type="text" placeholder="phone, email, or instagram" required>
             </div>
 
-            <div class="field field-full">
-              <label for="f-loaf">which loaf?</label>
-              <select id="f-loaf" name="loaf" required>
-                <option value="" selected disabled>pick a loaf</option>
-                <option>classic sourdough ($10)</option>
-                <option>cinnamon raisin ($13)</option>
-                <option>jalapeño cheddar ($15)</option>
-                <option>custom specialty loaf ($12–16+)</option>
-              </select>
-            </div>
+            <fieldset class="field-full loaves">
+              <legend>your loaves</legend>
+              <div class="loaf-list"></div>
+              <button class="add-loaf" type="button">+ add another loaf</button>
+              <p class="loaf-total" aria-live="polite"></p>
+            </fieldset>
 
-            <div class="field field-small">
-              <label for="f-qty">how many?</label>
-              <input id="f-qty" name="quantity" type="number" min="1" max="20" value="1" inputmode="numeric" required>
-            </div>
+            <!-- one loaf row; copied by script.js each time "add another loaf" is pressed -->
+            <template id="loaf-row">
+              <div class="loaf-row">
+                <div class="field">
+                  <label>which loaf?</label>
+                  <select name="loaf" required>
+                    <option value="" selected disabled>pick a loaf</option>
+                    <option value="classic sourdough" data-price="10">classic sourdough ($10)</option>
+                    <option value="cinnamon raisin" data-price="13">cinnamon raisin ($13)</option>
+                    <option value="jalapeño cheddar" data-price="15">jalapeño cheddar ($15)</option>
+                    <option value="custom specialty loaf" data-price="">custom specialty loaf ($12–16+)</option>
+                  </select>
+                </div>
+                <div class="field field-qty">
+                  <label>how many?</label>
+                  <input name="quantity" type="number" min="1" max="20" value="1" inputmode="numeric" required>
+                </div>
+                <button class="remove-loaf" type="button" aria-label="remove this loaf">×</button>
+              </div>
+            </template>
 
-            <div class="field field-small">
+            <div class="field field-full field-date">
               <label for="f-date">pickup date</label>
               <input id="f-date" name="pickup_date" type="date" required>
             </div>
 
             <div class="field field-full">
-              <label for="f-notes">anything else? <small>(custom flavors, more loaves, questions)</small></label>
+              <label for="f-notes">anything else? <small>(custom flavor ideas, questions)</small></label>
               <textarea id="f-notes" name="notes" rows="3"></textarea>
             </div>
 
